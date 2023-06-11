@@ -97,9 +97,9 @@ img{
   cursor: pointer;
 }
 #articles{
-  border: 2px solid blue;
   display: flex;
   padding: 0 70px;
+  margin: 50px 0;
 }
 #articles ul{
   display: flex;
@@ -109,20 +109,88 @@ img{
 #articles li{
   display: flex;
   align-items:flex-start;
-  border: 1px solid red;
 }
 #articles li div{
-  /* padding:0 20px;   */
-  padding:0 15px;
+  padding-left: 10px;
 }
 #articles h4{
-  font-size: 3rem;
+  font-size: 2.5rem;
+  color:  hsl(233, 8%, 79%);
 }
 #articles li div p{
   font-size: 15px;
-  border: 1px solid #000;
 }
-#articles img{
-  height: auto;
-  vertical-align: top;
+#articles h5{
+  padding:10px 0;
+  color: hsl(240, 100%, 5%);
+  cursor: pointer;
+}
+#articles h5:hover{
+  color: hsl(5, 85%, 63%);
+}
+
+/* MEDIA */
+@media screen and (max-width:767px) {
+  body{
+  min-width:375px;
+  font-family: 'Inter', sans-serif;
+}
+  #nav-links{
+    position: fixed;
+    z-index: 1;
+    inset:0 0 0 120px;
+    background-color: hsl(36, 100%, 99%);
+    flex-direction: column;
+    padding: 150px 0 0 30px;
+    transform: translateX(100%);  
+    transition: transform 350ms ease-out;
+  }
+  #menu{
+    display:block;
+    cursor: pointer;
+    z-index: 2;
+  }
+  #nav-links[data-visible = 'true']{
+    transform: translateX(0%);  
+  }
+  nav{
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 10px;
+}
+  main{
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#web_3{
+  display:flex;
+  flex-direction: column;
+}
+#web_3 h1{
+  font-size: 2.5rem;
+  width:80%;
+}
+#web3_para{
+  width:100%;
+  font-size: 16px;
+  padding-left: 0;
+}
+#btn{
+  margin: 50px 0 0 0;
+
+}
+#articles{
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  margin: 50px 0;
+}
+#articles ul{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 }

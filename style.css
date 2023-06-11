@@ -1,37 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 *{
   padding: 0;
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
 }
-/* utilities */
-.p-1{
-  padding: 50px 100px 30px 100px;
+body{
+  min-width:1024px;
+  font-family: 'Inter', sans-serif;
 }
-#nav__container{
+nav{
   display: flex;
   justify-content: space-between;
-  align-items: center;  
+  align-items: center;
+  padding: 30px 70px;
 }
-#nav__list{
-  list-style-type:none;
+#nav-links{
   display: flex;
-  width:30%; 
-  justify-content: space-between;
+  list-style-type: none;
+  gap: 2rem;
 }
-#nav__list a{
+#nav-links a{
   text-decoration: none;
+  color: hsl(236, 13%, 42%);
 }
-.image_1{
-  width:900px;
+#nav-links a:hover{
+  color:hsl(5, 85%, 63%);
 }
-section{
-  display: grid;
-  width: 100%;
-  grid-template-columns:900px minmax(300px,400px);
-  grid-template-rows:450px ;
-  gap:2rem;
+#menu{
+  display: none;
 }
-aside{
+main{
+  padding: 0 70px;
+  display: flex;
+  gap: 2rem;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+#web_3{
+  display:flex;
+  border: 1px solid #000;
+  /* gap: 5rem; */
+}
+#web_3 h1{
+  font-size: 3.5rem;
+  color:hsl(240, 100%, 5%);
+  text-align: left;
+  width:300px;
+}
+#web3_para{
+  border: 1px solid green;
+  width: 600px;
+  font-size: 15px;
+  line-height: 1.6;
+  color:hsl(233, 8%, 79%);
+  padding-left: 250px;
+}
+#info{
   background-color: hsl(240, 100%, 5%);
-  color:hsl(36, 100%, 99%);
+  color: hsl(36, 100%, 99%);
+  padding:0 20px;
+}
+#info_heading{
+  color: hsl(35, 77%, 62%);
+  padding: 30px 0 0 20px;
+  font-size: 2rem;
+
+}
+#info div{
+  border: 1px solid red;
+  /* width: 100%; */
+  margin: 20px auto;
 }
